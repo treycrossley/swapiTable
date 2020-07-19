@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PearlApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# swapiTable
+A table that gets data from the Star Wars API and presents it in a filtered/sortable/paginated table using Angular 9
+>>>>>>> dec1531c43856931647450b90f8071247bb3133c
