@@ -1,0 +1,24 @@
+.dataTable {
+    margin: 2% 5%;
+}
+
+.spinner {
+    margin: auto;
+    margin-top: 5%
+}
+
+.paginator{
+    float: right;
+}
+
+.filter {
+    display: inline-block;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.hidden{
+    visibility: hidden;
+}

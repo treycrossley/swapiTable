@@ -1,0 +1,48 @@
+<div >
+
+    <mat-spinner *ngIf="apiLength === 0" class="spinner"></mat-spinner>
+
+
+    <div [ngClass]="apiLength !== 0 ? 'visible' : 'hidden'" class="dataTable">
+
+        <mat-form-field class="filter">
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+        </mat-form-field>
+
+
+        <mat-paginator class="paginator" [length]="apiLength" [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 15, 20]"></mat-paginator>
+    
+        <mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8">
+    
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+            </ng-container>
+    
+            <!-- height Column -->
+            <ng-container matColumnDef="height">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Height </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.height}} </mat-cell>
+            </ng-container>
+    
+            <!-- Mass Column -->
+            <ng-container matColumnDef="mass">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Mass </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.mass}} </mat-cell>
+            </ng-container>
+    
+             <!-- Hair_Color Column -->
+             <ng-container matColumnDef="hair_color">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Hair Color </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.hair_color}} </mat-cell>
+              </ng-container>
+    
+    
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    </div>
+</div>
